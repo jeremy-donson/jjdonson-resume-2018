@@ -9,29 +9,22 @@ class Accordion extends Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
-    this.state = { collapse: false };
+    this.toggle1 = this.toggle1.bind(this);
+    this.state = { collapse: false, collapse1: false, collapse2: false, collapse3: false, collapse4: false };
+    console.log(this.state);
   }
 
-  toggle() {
-    this.setState({ collapse: !this.state.collapse });
-  }
+  toggle() { this.setState({ collapse: !this.state.collapse });  console.log(this.state); }
+
+  toggle1() { this.setState({ collapse1: !this.state.collapse1 });   console.log(this.state); }
   
-  helloStateName() { return <h1>Hello, {this.state.name}</h1>; } 
-  validateYAML(yaml_file_strux, yaml_file) {}
-  parseYAML() {}
-  configCollapse() { }
-  styleSideBySide() { } 
-
-  buttonStyle = "borderColor: 'Black', marginBottom: '0rem'";
-  buttonAttribs() { return 'id="1" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle} buttonStyle() ;' }
-
   render() {
     return (
-      <div >
-        <div align="center" style={{ color: "White", backgroundColor: 'Green', overflow: 'auto' }}>
+      <div>
+        <div align="center" style={{ borderColor: 'Black', backgroundColor: '#add8e6', overflow: 'auto' }}>
         <br/><h5>TechExecRecruiter.com</h5><h6>Strategic Online Tools + Services</h6></div>
-        <Button id="1" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Registration</Button>
-        <Collapse id="1" isOpen={this.state.collapse}>
+        <Button id="0" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Employers</Button>
+        <Collapse id="0" isOpen={this.state.collapse}>
           <Card style={{ backgroundColor: 'Pink' }}>
             <CardBody >
             <div align="center" style={{ width: '50%', height: '50%', float: 'left' }}>Rapid Candidate Registration</div>
@@ -40,13 +33,23 @@ class Accordion extends Component {
           </Card>
         </Collapse>
 
-        <Button id="2" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle} style={{  borderColor: 'Black', marginBottom: '0rem' }}>iOS Mobile Apps</Button>
-        <Collapse id="2" isOpen={this.state.collapse}>
+        <Button id="8" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle1} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Employers</Button>
+        <Collapse id="8" isOpen={this.state.collapse1}>
+          <Card style={{ backgroundColor: 'Pink' }}>
+            <CardBody >
+            <div align="center" style={{ width: '50%', height: '50%', float: 'left' }}>Rapid Candidate Registration</div>
+            <div align="center" style={{ width: '50%', height: '50%', float: 'right'}}>Rapid Employer Job Posting</div>
+            </CardBody>
+          </Card>
+        </Collapse>
+
+        <Button id="1" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle} style={{  borderColor: 'Black', marginBottom: '0rem' }}>Candidates</Button>
+        <Collapse id="1" isOpen={this.state.collapse}>
           <Card>
-            <CardBody align="center">
+            <CardBody align="left" >
             <ul>
             <li>DRY HTML String</li>
-            <li>Center Bullets</li>
+            <li>Sortify</li>
             <li>Left justify bullets at 20% left padded</li>
             <li>Set screen height and adjust on reveal.</li>
             <li><a target="_blank" rel="noopener noreferrer" href="https://v4-alpha.getbootstrap.com/components/collapse/">Separate Actions</a></li>
@@ -61,8 +64,8 @@ class Accordion extends Component {
           </Card>
         </Collapse>
 
-        <Button id="3" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Android Mobile App</Button>
-        <Collapse id="3" isOpen={this.state.collapse}>
+        <Button id="2" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Mobile Apps</Button>
+        <Collapse id="2" isOpen={this.state.collapse}>
           <Card>
             <CardBody>
            <ul>
@@ -74,8 +77,8 @@ class Accordion extends Component {
         </Collapse>
 
 
-        <Button id="4" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Strategic Roadmaps</Button>
-        <Collapse id="4" isOpen={this.state.collapse}>
+        <Button id="3" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Support Services</Button>
+        <Collapse id="3" isOpen={this.state.collapse}>
           <Card >
             <CardBody>
              Job Sourcing & Talent Sourcing
@@ -83,8 +86,8 @@ class Accordion extends Component {
           </Card>
         </Collapse>
 
-        <Button id="5" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Support Services</Button>
-        <Collapse id="5" isOpen={this.state.collapse}>
+        <Button id="4" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Strategic Roadmaps</Button>
+        <Collapse id="4" isOpen={this.state.collapse}>
           <Card  >
             <CardBody>
              Job Sourcing & Talent Sourcing
@@ -101,6 +104,20 @@ export default Accordion;
 
 
 /*
+  helloStateName() { return <h1>Hello, {this.state.name}</h1>; } 
+  validateYAML(yaml_file_strux, yaml_file) {}
+  parseYAML(aml_file_strux, yaml_file) {}
+  configCollapse() { }
+  styleSideBySide() { }
+  routeURL() { }
+
+  topDivStyleF() { return "color: 'White', backgroundColor: 'Green', overflow: 'auto'"; }
+  topDivStyle = "style={{ color: 'White', backgroundColor: 'Green', overflow: 'auto' }}";
+
+  buttonStyle = "borderColor: 'Black', marginBottom: '0rem'";
+  buttonAttribs() { return 'id="1" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle} buttonStyle() ;' ;}
+
+---
 // https://css-tricks.com/html5-progress-element/
   <link rel="stylesheet" href="https://cloud.typography.com/610186/6645572/css/fonts.css">
   <!--[if !IE]><!-->
@@ -116,9 +133,10 @@ export default Accordion;
 
 
 // http://reactstrap.github.io/components/button-dropdown/
-// 
+// https://react.rocks/example/react-sortable-tree
 
 //  fontFamily: 'Arial', 
 // import { Collapse, Button, CardBody, Card, Progress } from 'reactstrap';
 // <img style={{width: 66, height: 58}} src={ logo } />
 // <li><a target="_blank" rel="noopener noreferrer" href="https://fonts.google.com/specimen/Noticia+Text" />Button Fonts</a></li>
+
