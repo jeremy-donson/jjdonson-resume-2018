@@ -10,13 +10,21 @@ class Accordion extends Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.toggle1 = this.toggle1.bind(this);
+    this.toggle2 = this.toggle2.bind(this);
+    this.toggle3 = this.toggle3.bind(this);
+    this.toggle4 = this.toggle4.bind(this);
+    this.toggle5 = this.toggle5.bind(this);
+
     this.state = { collapse: false, collapse1: false, collapse2: false, collapse3: false, collapse4: false };
     console.log(this.state);
   }
 
-  toggle() { this.setState({ collapse: !this.state.collapse });  console.log(this.state); }
-
-  toggle1() { this.setState({ collapse1: !this.state.collapse1 });   console.log(this.state); }
+  toggle() { this.setState({ collapse: !this.state.collapse });  console.log(this.state.collapse); }
+  toggle1() { this.setState({ collapse1: !this.state.collapse1 });   console.log(this.state.collapse1); }
+  toggle2() { this.setState({ collapse2: !this.state.collapse2 });   console.log(this.state.collapse2); }
+  toggle3() { this.setState({ collapse3: !this.state.collapse3 });   console.log(this.state.collapse3); }
+  toggle4() { this.setState({ collapse4: !this.state.collapse4 });   console.log(this.state.collapse4); }
+  toggle5() { this.setState({ collapse5: !this.state.collapse5 });   console.log(this.state.collapse5); }
   
   render() {
     return (
@@ -43,8 +51,8 @@ class Accordion extends Component {
           </Card>
         </Collapse>
 
-        <Button id="1" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle} style={{  borderColor: 'Black', marginBottom: '0rem' }}>Candidates</Button>
-        <Collapse id="1" isOpen={this.state.collapse}>
+        <Button id="1" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle2} style={{  borderColor: 'Black', marginBottom: '0rem' }}>Candidates</Button>
+        <Collapse id="1" isOpen={this.state.collapse2}>
           <Card>
             <CardBody align="left" >
             <ul>
@@ -64,8 +72,8 @@ class Accordion extends Component {
           </Card>
         </Collapse>
 
-        <Button id="2" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Mobile Apps</Button>
-        <Collapse id="2" isOpen={this.state.collapse}>
+        <Button id="2" className="btn btn-primary btn-lg btn-block" color="secondary" onClick={this.toggle3} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Mobile Apps</Button>
+        <Collapse id="2" isOpen={this.state.collapse3}>
           <Card>
             <CardBody>
            <ul>
@@ -77,8 +85,8 @@ class Accordion extends Component {
         </Collapse>
 
 
-        <Button id="3" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Support Services</Button>
-        <Collapse id="3" isOpen={this.state.collapse}>
+        <Button id="3" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary" onClick={this.toggle4} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Support Services</Button>
+        <Collapse id="3" isOpen={this.state.collapse4}>
           <Card >
             <CardBody>
              Job Sourcing & Talent Sourcing
@@ -86,8 +94,8 @@ class Accordion extends Component {
           </Card>
         </Collapse>
 
-        <Button id="4" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary" onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Strategic Roadmaps</Button>
-        <Collapse id="4" isOpen={this.state.collapse}>
+        <Button id="4" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary" onClick={this.toggle5} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Strategic Roadmaps</Button>
+        <Collapse id="4" isOpen={this.state.collapse5}>
           <Card  >
             <CardBody>
              Job Sourcing & Talent Sourcing
