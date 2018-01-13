@@ -16,8 +16,16 @@
   height: 60px;
 }
 
+.Job-logo-sm {
+  height: 20px;
+}
+
 .Job-logo {
   height: 30px;
+}
+
+.Job-logo1 {
+  height: 40px;
 }
 
 .Job-logo2 {
@@ -25,14 +33,16 @@
 }
 
 .Job-logo3 {
-  height: 20px;
+  height: 70px;
 }
 
 .Job-logo4 {
   height: 90px;
 }
 
-
+.Job-logo5 {
+  height: 110px;
+}
 
 .App-header {
   background-color: #222;
@@ -65,4 +75,10 @@
 p {
   font-size: small;
   color: gray;
+}
+
+.ptop1 {
+  font-size: small;
+  color: gray;
+  padding-top: 10px;
 }
