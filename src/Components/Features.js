@@ -2,14 +2,17 @@ export default {
     imports: [
         {
             feature: "hover over link",
-            demo: "",
-            source: ""
+            demo: "http://ianlunn.github.io/Hover/",
+            article: "",
+            source: "https://github.com/IanLunn/Hover",
             browser_support: "",
             fallback: ""
         },
         {
             feature: "masonry",
             demo: "http://w3bits.com/css-masonry/",
+            article: ""
+            source: ""
             browser_support: "",
             fallback: ""
         }
@@ -20,7 +23,8 @@ export default {
 /*
             feature: "",
             demo: "",
-            source: ""
+            article: "",
+            source: "",
             browser_support: "",
             fallback: ""
 */

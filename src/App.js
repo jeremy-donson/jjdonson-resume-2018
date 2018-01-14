@@ -71,7 +71,7 @@ class Accordion extends Component {
   toggle6() { this.setState({ collapse6: !this.state.collapse6 });   console.log(this.state.collapse6); }
   toggle7() { this.setState({ collapse7: !this.state.collapse7 });   console.log(this.state.collapse7); }
 
- makeHref() { return {} }
+ makeHref() { }
 
   render() {
     return (
@@ -96,12 +96,12 @@ class Accordion extends Component {
             <img src={ react_logo_b } className="Job-logo2" alt="logo" /></a>
             <br/>Apps
             <hr/>
-            Big Data Arch + Eng<br/>
+            Scripting<br/>Bash<br/>Python<br/><br/><img src={ python } className="Job-logo2" alt="logo" /><br/>10+ yrs
+            <hr/>
+            Big Data<br/>Architecture + Engineering<br/>
             <a href="https://www.percona.com" target="_blank" rel="noopener noreferrer"><img src={ mysql } className="Job-logo4" alt="logo" /></a><br/>
             <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer"><img src={ postgres } className="Job-logo3" alt="logo" /></a><br/>
             <a href="https://kafka.apache.org/" target="_blank" rel="noopener noreferrer"><img src={ kafka } className="Job-logo1" alt="logo" /></a><br/>10+ yrs<hr/>
-            Bash Python Scripts<br/><br/><img src={ python } className="Job-logo2" alt="logo" /><br/>10+ yrs
-            <hr/>
             Dev Team Laptop Mgt<br/>
             <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer"><img src={ apple } className="Job-logo3" alt="logo" /></a><br/>
             <p><a href="https://brew.sh" target="_blank" rel="noopener noreferrer"><img src={ brew } className="Job-logo2" alt="logo" /></a></p>
@@ -115,16 +115,16 @@ class Accordion extends Component {
             <img src={ tux } className="Job-logo3" alt="logo" /></a><br/>
             10+ yrs
             <hr/>            
-            Auto Infra<br/>
+            Infrastructure<br/>Automation<br/>
             <a href="https://www.ansible.com/" target="_blank" rel="noopener noreferrer"><img src={ ansible } className="Job-logo3" alt="logo" /></a><br/><br/>
             <a href="https://www.hashicorp.com" target="_blank" rel="noopener noreferrer"><img src={ tform } className="Job-logo3" alt="logo" /></a><br/><br/>
             <a href="https://www.tectonic.com" target="_blank" rel="noopener noreferrer"><img src={ coreOS } className="Job-logo4" alt="logo" /></a><br/><br/>
             10+ yrs
             <hr/>            
-            Tech Proj Mgt<br/>
+            Technincal Project Management<br/>
             <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener noreferrer"><img src={ jira } className="Job-logo2" alt="logo" /></a><br/>10+ yrs
             <hr/>            
-            Biz Strat<br/> 10+ yrs
+            Business Strategy<br/> 10+ yrs
             </div>
             </CardBody>
           </Card>
@@ -138,7 +138,7 @@ class Accordion extends Component {
 
             <div align="center">
             <h6><strong>Projects At Scale</strong></h6><br/>
-            Dev Ops Engineer<br/><br/>
+            Dev Ops<br/>Lead Engineer<br/><br/>
             <a target="_blank" rel="noopener noreferrer" href="https://www.bankofamerica.com/">
             <img src={ bofa_logo } className="Job-logo3" alt="logo" /></a><br/>
             <hr/>
@@ -147,9 +147,9 @@ class Accordion extends Component {
             <img src={ google_logo } className="Job-logo1" alt="logo" /></a></p><br/>
             <p><a target="_blank" rel="noopener noreferrer" href="hhttps://creditcards.chase.com/exploreproducts2">
             <img src={ chase } className="Job-logo" alt="logo" /></a></p>
-            <p><a target="_blank" rel="noopener noreferrer" href="">
-            <img src={ citi } className="Job-logo5" alt="logo" /></a></p>
             <p><a target="_blank" rel="noopener noreferrer" href="https://online.citi.com/US/login.do">
+            <img src={ citi } className="Job-logo5" alt="logo" /></a></p>
+            <p><a target="_blank" rel="noopener noreferrer" href="https://www.athenacr.com/">
             Athena<img src={ athena } className="Job-logo1" alt="logo" />Capital</a>
             </p>
             <hr/>
@@ -157,8 +157,8 @@ class Accordion extends Component {
             <a target="_blank" rel="noopener noreferrer" href="https://www.credit-suisse.com/us/en.html">
             <img src={ cs_logo }  className="Job-logo1" alt="logo" /></a>
             <hr/>
-            Engineer, Architect & Tech Project Mgr<br/><br/>
-            <a target="_blank" rel="noopener noreferrer" href="">
+            Engineer, Architect & Tech Project Manager<br/><br/>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.sintecmedia.com/">
             <img src={ sint_logo }  className="Job-logo1" alt="logo" /></a>
             <hr/>
             Mobile Cloud Marketing Strategist<br/><br/>
@@ -178,10 +178,10 @@ class Accordion extends Component {
         <Collapse id="2" isOpen={this.state.collapse2}>
           <Card style={{ backgroundColor: '#5F9EA0' }}>
             <CardBody >
-            <div align="center" style={{ width: '80%', height: '50%', float: 'left' }}>
+            <div align="center">
             <Router>
             <div>
-            <ul align="left" style={{listStyle: 'none'}}>
+            <ul style={{listStyle: 'none'}}>
             <li><Link to="/linkedUp">linkedUp<img src={ clear } className="Job-logo" alt="logo" /><img src={ linkedup_logo } className="Job-logo3" alt="logo" /></Link></li>
             <hr/>
             <li><Link to="/barterEngine"><img src={ barter_logo } className="Job-logo3" alt="logo" />barterEngine</Link></li>
@@ -207,23 +207,20 @@ class Accordion extends Component {
           <Card style={{ backgroundColor: '#5F9EA0' }}>
             <CardBody align="left" >
             <div align="center">
-            <h6>Web Resume</h6>
             <Router>
             <div>
-            <ul align="left" style={{listStyle: 'none'}}>
-            <li><Link to="/resumeIntro">Introduction</Link></li>
-            <li><Link to="/resume">Web Resume</Link></li>
-            <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jjdonson/">LinkedIn</a></li>
+            <ul align="center" style={{listStyle: 'none'}}>
+            <li><Link to="/resumeIntro">intro</Link> - <a href="https://tinyurl.com/y7l5ytbt" target="_blank" rel="noopener noreferrer" >resume</a> - <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jjdonson/">linkedin</a></li>
             </ul>
             <Switch>
               <Route path="/resumeIntro" component={intro}/>
-              <Route path="/resume" component={resume}/>
+{/*              <Route path="/resume" component={resume}/> */}
             </Switch>
             </div>
             </Router>
             <hr/>
+            <ul align="center" style={{listStyle: 'none'}}>
             <h6>Certifications</h6>
-            <ul align="left" style={{listStyle: 'none'}}>
             <li>MySQL DBA</li>
             <li>RHEL Linux</li>
             <li>Oracle DBA</li>
@@ -264,7 +261,7 @@ class Accordion extends Component {
             <Link to="/envs"><small>Code Pipeline</small><img src={ clear } className="Job-logo" alt="logo" />
             <img src={ envs_thumb } className="Job-logo3" alt="logo" /></Link>
             <hr/>
-            <Link to="route" target="_blank" onClick={(event) => {event.preventDefault(); window.open(this.makeHref("moo"));}}>moo</Link>
+            <Link to="route" target="_blank" onClick={(event) => {event.preventDefault(); window.open(this.makeHref("./_oss-stack-svg.html"));}}>moo</Link>
             <hr/>
              </div>
              </Router>
