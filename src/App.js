@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
+
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import  { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
+import linkedup_logo from './Images/linkup.svg';
+import barter_logo from './Images/appengine.svg';
+import wehive_logo from './Images/honeycomb.svg';
+import bug from './Images/bug.svg';
+import caller from './Images/people.svg';
+import mail_logo from './Images/email-logo.svg';
 import react_logo from './Images/react-logo.svg';
 import react_logo_black from './Images/react-logo-black.svg';
 import msword_logo from './Images/word-icon.png';
 import pdf_logo from './Images/pdf-icon.png';
 import bofa_logo from './Images/bofa-logo.png';
-
 import sint_logo from './Images/sintec-media-logo.png';
 import google_logo from './Images/google.png';
 import cs_logo from './Images/Credit_Suisse_Logo.png';
@@ -15,12 +23,10 @@ import citi from './Images/citi.png';
 import chase from './Images/chase.svg';
 import athena from './Images/athena.svg';
 import coreOS from './Images/coreos.png';
-
 import teo_logo from './Images/teo.png';
 import clear from './Images/clear.png';
 import apple from './Images/apple.svg';
 import brew from './Images/homebrew.png';
-
 import win from './Images/winlogo2006.svg';
 import git from './Images/git.png';
 import react_logo_b from './Images/react-blue-on-black.svg';
@@ -30,25 +36,33 @@ import postgres from './Images/postgres.svg';
 import kafka from './Images/kafka.svg';
 import jira from './Images/jira-logo.png';
 import tux from './Images/tux.svg';
-
 import ansible from './Images/ansible-logo.png';
 import tform from './Images/terraform.png';
-
 import mswDoc from './Images/jjdonson-resume-2018.docx';
 import pdfDoc from './Images/jjdonson-resume-2018.pdf';
+
+import iaas_clust_thumb from './Images/_diagram-cluster_thumb.png';
+import oss_stacks_thumb from './Images/_oss-client-server-stacks_thumb.png';
+import envs_thumb from './Images/_envs_thumb.png';
+
+import intro from './Components/Intro';
+import resume from './Components/Resume';
+import pagenot from './Components/PageNot';
+
+import linkedup from './Components/LinkedUp';
+import barterengine from './Components/BarterEngine';
+import wehive from './Components/WeHive';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 class Accordion extends Component {
-  constructor(props) {
-    super(props);
-    this.toggle = this.toggle.bind(this); this.toggle1 = this.toggle1.bind(this); this.toggle2 = this.toggle2.bind(this); this.toggle3 = this.toggle3.bind(this); this.toggle4 = this.toggle4.bind(this); this.toggle5 = this.toggle5.bind(this); this.toggle6 = this.toggle6.bind(this); this.toggle7 = this.toggle7.bind(this);
-    this.state = { collapse: false, collapse1: false, collapse2: false, collapse3: false, collapse4: false , collapse5: false , collapse6: false , collapse7: false  };
-//    console.log(this.state);
+  constructor(props) { super(props);
+    this.toggle0 = this.toggle0.bind(this); this.toggle1 = this.toggle1.bind(this); this.toggle2 = this.toggle2.bind(this); this.toggle3 = this.toggle3.bind(this); this.toggle4 = this.toggle4.bind(this); this.toggle5 = this.toggle5.bind(this); this.toggle6 = this.toggle6.bind(this); this.toggle7 = this.toggle7.bind(this); this.makeHref = this.makeHref.bind(this);
+    this.state = { collapse0: false, collapse1: false, collapse2: false, collapse3: false, collapse4: false , collapse5: false, collapse6: false, collapse7: false };
   }
 
-  toggle() { this.setState({ collapse: !this.state.collapse });  console.log(this.state.collapse); }
+  toggle0() { this.setState({ collapse0: !this.state.collapse0 });   console.log(this.state.collapse0); }
   toggle1() { this.setState({ collapse1: !this.state.collapse1 });   console.log(this.state.collapse1); }
   toggle2() { this.setState({ collapse2: !this.state.collapse2 });   console.log(this.state.collapse2); }
   toggle3() { this.setState({ collapse3: !this.state.collapse3 });   console.log(this.state.collapse3); }
@@ -57,74 +71,90 @@ class Accordion extends Component {
   toggle6() { this.setState({ collapse6: !this.state.collapse6 });   console.log(this.state.collapse6); }
   toggle7() { this.setState({ collapse7: !this.state.collapse7 });   console.log(this.state.collapse7); }
 
+ makeHref() { return {} }
+
   render() {
     return (
 
       <div>
         <div align="center" style={{ borderColor: 'Black', backgroundColor: '#6495ED', overflow: 'auto' }}>
-        <img src={react_logo_black} className="App-logo" alt="logo" />
+        <a href ="/" title="return2home"><img src={react_logo_black} className="App-logo" alt="logo" /></a>
+        <h6><small>emerging tools</small></h6>
         <h6><small>jeremy j donson</small></h6>
         <h6><small>urbanspectra • new york city, ny</small></h6>
         </div>
+
         <Button id="0" className="btn btn-primary btn-lg btn-block" color="secondary"
-        onClick={this.toggle} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Professional Experience</Button>
-        <Collapse id="0" isOpen={this.state.collapse}>
+        onClick={this.toggle0} style={{ borderColor: 'Black', marginBottom: '0rem' }}><small>Expertise</small></Button>
+        <Collapse id="0" isOpen={this.state.collapse0}>
           <Card style={{ backgroundColor: '#5F9EA0' }}>
             <CardBody >
 
-            <div align="center" style={{ width: '35%', height: '50%', float: 'left'}}>
-            <h6><strong>Expert Skills</strong></h6><br/>
+            <div align="center">
+            <h6><strong>Full Stack Skills</strong></h6><br/>
             Web<br/><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" >
             <img src={ react_logo_b } className="Job-logo2" alt="logo" /></a>
             <br/>Apps
             <hr/>
             Big Data Arch + Eng<br/>
-            <img src={ mysql } className="Job-logo4" alt="logo" /><br/>
-            <img src={ postgres } className="Job-logo3" alt="logo" /><br/>
-            <img src={ kafka } className="Job-logo1" alt="logo" /><br/>10+ yrs<hr/>
+            <a href="https://www.percona.com" target="_blank" rel="noopener noreferrer"><img src={ mysql } className="Job-logo4" alt="logo" /></a><br/>
+            <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer"><img src={ postgres } className="Job-logo3" alt="logo" /></a><br/>
+            <a href="https://kafka.apache.org/" target="_blank" rel="noopener noreferrer"><img src={ kafka } className="Job-logo1" alt="logo" /></a><br/>10+ yrs<hr/>
             Bash Python Scripts<br/><br/><img src={ python } className="Job-logo2" alt="logo" /><br/>10+ yrs
             <hr/>
             Dev Team Laptop Mgt<br/>
-            <img src={ apple } className="Job-logo3" alt="logo" /><br/>
-            <p><img src={ brew } className="Job-logo2" alt="logo" /></p>
-            <img src={ win } className="Job-logo2" alt="logo" /><br/>10+ yrs<br/>
+            <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer"><img src={ apple } className="Job-logo3" alt="logo" /></a><br/>
+            <p><a href="https://brew.sh" target="_blank" rel="noopener noreferrer"><img src={ brew } className="Job-logo2" alt="logo" /></a></p>
+            <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer"><img src={ win } className="Job-logo2" alt="logo" /></a><br/>10+ yrs<br/>
             <hr/>
-            Git + Github<br/><img src={ git } className="Job-logo2" alt="logo" /><br/> 10+ yrs
+            Git + Github<br/>
+            <a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><img src={ git } className="Job-logo2" alt="logo" /></a><br/> 10+ yrs
             <hr/>
             Linux<br/>
-            <a href="https://www.archlinux.org/" target="_blank" rel="noopener noreferrer" ><img src={ tux } className="Job-logo3" alt="logo" /></a><br/>
+            <a href="https://www.archlinux.org/" target="_blank" rel="noopener noreferrer" >
+            <img src={ tux } className="Job-logo3" alt="logo" /></a><br/>
             10+ yrs
             <hr/>            
             Auto Infra<br/>
-            <img src={ ansible } className="Job-logo3" alt="logo" /><br/><br/>
-            <img src={ tform } className="Job-logo3" alt="logo" /><br/><br/>
-            <img src={ coreOS } className="Job-logo4" alt="logo" /><br/><br/>
+            <a href="https://www.ansible.com/" target="_blank" rel="noopener noreferrer"><img src={ ansible } className="Job-logo3" alt="logo" /></a><br/><br/>
+            <a href="https://www.hashicorp.com" target="_blank" rel="noopener noreferrer"><img src={ tform } className="Job-logo3" alt="logo" /></a><br/><br/>
+            <a href="https://www.tectonic.com" target="_blank" rel="noopener noreferrer"><img src={ coreOS } className="Job-logo4" alt="logo" /></a><br/><br/>
             10+ yrs
             <hr/>            
             Tech Proj Mgt<br/>
-            <img src={ jira } className="Job-logo2" alt="logo" /><br/>10+ yrs
+            <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener noreferrer"><img src={ jira } className="Job-logo2" alt="logo" /></a><br/>10+ yrs
             <hr/>            
             Biz Strat<br/> 10+ yrs
             </div>
-            <div align="center" style={{ width: '65%', height: '50%', float: 'right' }}>
+            </CardBody>
+          </Card>
+        </Collapse>
+
+        <Button id="1" className="btn btn-primary btn-lg btn-block" color="secondary"
+        onClick={this.toggle1} style={{ borderColor: 'Black', marginBottom: '0rem' }}><small>Professional Experience</small></Button>
+        <Collapse id="1" isOpen={this.state.collapse1}>
+          <Card style={{ backgroundColor: '#5F9EA0' }}>
+            <CardBody >
+
+            <div align="center">
             <h6><strong>Projects At Scale</strong></h6><br/>
             Dev Ops Engineer<br/><br/>
-            <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/y75dazyh">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.bankofamerica.com/">
             <img src={ bofa_logo } className="Job-logo3" alt="logo" /></a><br/>
             <hr/>
             Data Architect & Cloud Engineer<br/><br/>
-            <p><a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/y9ekm8r3">
+            <p><a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store">
             <img src={ google_logo } className="Job-logo1" alt="logo" /></a></p><br/>
-            <p><a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/y9ekm8r3">
+            <p><a target="_blank" rel="noopener noreferrer" href="hhttps://creditcards.chase.com/exploreproducts2">
             <img src={ chase } className="Job-logo" alt="logo" /></a></p>
-            <p><a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/y9ekm8r3">
+            <p><a target="_blank" rel="noopener noreferrer" href="">
             <img src={ citi } className="Job-logo5" alt="logo" /></a></p>
-            <p><a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/y9ekm8r3">
+            <p><a target="_blank" rel="noopener noreferrer" href="https://online.citi.com/US/login.do">
             Athena<img src={ athena } className="Job-logo1" alt="logo" />Capital</a>
             </p>
             <hr/>
             Infrastructure Automation Engineer<br/><br/>
-            <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/y9kzvr3r">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.credit-suisse.com/us/en.html">
             <img src={ cs_logo }  className="Job-logo1" alt="logo" /></a>
             <hr/>
             Engineer, Architect & Tech Project Mgr<br/><br/>
@@ -132,141 +162,158 @@ class Accordion extends Component {
             <img src={ sint_logo }  className="Job-logo1" alt="logo" /></a>
             <hr/>
             Mobile Cloud Marketing Strategist<br/><br/>
-            <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/yaw8qxfc">
+            <a target="_blank" rel="noopener noreferrer" href="http://www.economistgroup.com/">
             <img src={ econ_logo }  className="Job-logo-sm" alt="logo" /></a>
             <hr/>
-            Web App Prototype Developer:<br/><br/>
+            Web App Dev:<br/><br/>
             <a target="_blank" rel="noopener noreferrer" href="">
             <img src={ teo_logo }  className="Job-logo" alt="logo" /></a>
-            <hr/>
-            <h6>Certs</h6>
-            MySQL DBA<br/>
-            RHEL Linux<br/>
-            Oracle DBA
-            <hr/>
-            <h6>Web Resume</h6>
-            <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/ycqkdsx4">Intro</a>
-            <br/>
-            <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/y7l5ytbt">Resume</a>
-            <br/>
-            <a target="https://www.linkedin.com/in/jjdonson/" rel="noopener noreferrer" href="">LinkedIn</a>
-            <hr/>
-            <h6>Resume Docs</h6>
-            <a href={mswDoc} download={mswDoc} title="download word doc"><img src={msword_logo} className="Msw-logo" alt="logo" /></a>
-            <a href={pdfDoc} download={pdfDoc} title="download pdf file" ><img src={pdf_logo} className="Msw-logo" alt="logo" /></a>
-            </div>
-
-            </CardBody>
-          </Card>
-        </Collapse>
-
-        <Button id="1" className="btn btn-primary btn-lg btn-block" color="secondary"
-        onClick={this.toggle1} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Current Projects</Button>
-        <Collapse id="1" isOpen={this.state.collapse1}>
-          <Card style={{ backgroundColor: '#5F9EA0' }}>
-            <CardBody >
-            <div align="center" style={{ width: '33%', height: '50%', float: 'left' }}>
-            
-            linkedUp
-            
-            </div>
-            <div align="center" style={{ width: '33%', height: '50%', float: 'left' }}>
-            
-            barterEngine
-            
-            </div>
-            <div align="center" style={{ width: '33%', height: '50%', float: 'right'}}>
-            
-            weHive
-            
             </div>
             </CardBody>
           </Card>
         </Collapse>
 
         <Button id="2" className="btn btn-primary btn-lg btn-block" color="secondary"
-        onClick={this.toggle2} style={{  borderColor: 'Black', marginBottom: '0rem' }}>Candidates</Button>
+        onClick={this.toggle2} style={{ borderColor: 'Black', marginBottom: '0rem' }}><small>Current Projects</small></Button>
         <Collapse id="2" isOpen={this.state.collapse2}>
-          <Card>
-            <CardBody align="left" >
-            <ul>
-            <li>DRY HTML String</li>
-            <li>Sortify</li>
-            <li><a target="_blank" rel="noopener noreferrer" href="http://modernizr.com">Modernizr</a></li>
-            <li><a target="_blank" rel="noopener noreferrer" href="https://fonts.google.com/specimen/Noticia+Text">Button Fonts</a></li>
-            <li><a target="_blank" rel="noopener noreferrer" href="http://vectorpaint.yaks.co.nz/">Logos</a></li>
+          <Card style={{ backgroundColor: '#5F9EA0' }}>
+            <CardBody >
+            <div align="center" style={{ width: '80%', height: '50%', float: 'left' }}>
+            <Router>
+            <div>
+            <ul align="left" style={{listStyle: 'none'}}>
+            <li><Link to="/linkedUp">linkedUp<img src={ clear } className="Job-logo" alt="logo" /><img src={ linkedup_logo } className="Job-logo3" alt="logo" /></Link></li>
+            <hr/>
+            <li><Link to="/barterEngine"><img src={ barter_logo } className="Job-logo3" alt="logo" />barterEngine</Link></li>
+            <hr/>
+            <li><Link to="/weHive">weHive<img src={ clear } className="Job-logo" alt="logo" /><img src={ wehive_logo } className="Job-logo3" alt="logo" /></Link></li>
+            <hr/>
             </ul>
+            <Switch>
+              <Route path="/linkedUp" component={linkedup}/>
+              <Route path="/barterEngine" component={barterengine}/>
+              <Route path="/weHive" component={wehive}/>
+            </Switch>
+            </div>
+            </Router>
+            </div>
             </CardBody>
           </Card>
         </Collapse>
 
         <Button id="3" className="btn btn-primary btn-lg btn-block" color="secondary"
-        onClick={this.toggle3} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Mobile Apps</Button>
+        onClick={this.toggle3} style={{  borderColor: 'Black', marginBottom: '0rem' }}><small>Resume Links</small></Button>
         <Collapse id="3" isOpen={this.state.collapse3}>
-          <Card>
-            <CardBody>
-           <ul>
-           <li></li>
-           <li></li>
-           </ul>
+          <Card style={{ backgroundColor: '#5F9EA0' }}>
+            <CardBody align="left" >
+            <div align="center">
+            <h6>Web Resume</h6>
+            <Router>
+            <div>
+            <ul align="left" style={{listStyle: 'none'}}>
+            <li><Link to="/resumeIntro">Introduction</Link></li>
+            <li><Link to="/resume">Web Resume</Link></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jjdonson/">LinkedIn</a></li>
+            </ul>
+            <Switch>
+              <Route path="/resumeIntro" component={intro}/>
+              <Route path="/resume" component={resume}/>
+            </Switch>
+            </div>
+            </Router>
+            <hr/>
+            <h6>Certifications</h6>
+            <ul align="left" style={{listStyle: 'none'}}>
+            <li>MySQL DBA</li>
+            <li>RHEL Linux</li>
+            <li>Oracle DBA</li>
+            </ul>
+            <hr/>
+            <h6>Download Docs</h6>
+            <a href={mswDoc} download={mswDoc} title="download word doc"><img src={msword_logo} className="Msw-logo" alt="logo" /></a>
+            <a href={pdfDoc} download={pdfDoc} title="download pdf file" ><img src={pdf_logo} className="Msw-logo" alt="logo" /></a>
+            </div>
             </CardBody>
           </Card>
         </Collapse>
 
+
         <Button id="4" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary"
-        onClick={this.toggle4} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Support Services</Button>
+        onClick={this.toggle4} style={{ borderColor: 'Black', marginBottom: '0rem' }}><small>Support Services</small></Button>
         <Collapse id="4" isOpen={this.state.collapse4}>
-          <Card >
+          <Card style={{ backgroundColor: '#5F9EA0' }}>
             <CardBody>
-             Job Sourcing & Talent Sourcing
+             
              </CardBody>
           </Card>
         </Collapse>
 
         <Button id="5" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary"
-        onClick={this.toggle5} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Strategic Roadmaps</Button>
+        onClick={this.toggle5} style={{ borderColor: 'Black', marginBottom: '0rem' }}><small>Strategic Roadmaps</small></Button>
         <Collapse id="5" isOpen={this.state.collapse5}>
-          <Card  >
+          <Card style={{ backgroundColor: '#5F9EA0' }}>
             <CardBody>
-             Job Sourcing & Talent Sourcing
+            <div>
+            <Router>
+            <div align="center">
+            <Link to="/ossStacks"><small>Stack Layers Diagram</small><br/><img src={ clear } className="Job-logo" alt="logo" />
+            <img src={ oss_stacks_thumb } className="Job-logo3" alt="logo" /></Link>
+            <hr/>
+            <Link to="/iaasCluster"><img src={ iaas_clust_thumb } className="Job-logo3" alt="logo" /><br/><small>Clustered IAAS Services</small></Link>
+            <hr/>
+            <Link to="/envs"><small>Code Pipeline</small><img src={ clear } className="Job-logo" alt="logo" />
+            <img src={ envs_thumb } className="Job-logo3" alt="logo" /></Link>
+            <hr/>
+            <Link to="route" target="_blank" onClick={(event) => {event.preventDefault(); window.open(this.makeHref("moo"));}}>moo</Link>
+            <hr/>
+             </div>
+             </Router>
+             </div>
              </CardBody>
           </Card>
         </Collapse>
 
         <Button id="6" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary"
-        onClick={this.toggle6} style={{ borderColor: 'Black', marginBottom: '0rem' }}>Make Contact</Button>
+        onClick={this.toggle6} style={{ borderColor: 'Black', marginBottom: '0rem' }}><small>UI Features</small></Button>
         <Collapse id="6" isOpen={this.state.collapse6}>
-          <Card  >
+          <Card style={{ backgroundColor: '#5F9EA0' }}>
             <CardBody>
-             <ul>
-             <li><a href="mailto:jjdonson@gmail.com?subject=webAppResume%20Feedback">email</a></li>
-             <li><a href="tel:1-718-710-9434">phone</a></li>
-             </ul>
+             <p>Feature</p>
+             <p>Demo</p>
+             <p>Source</p>
+             <p>Browser Support</p>
+             <p>Fallback</p>
              </CardBody>
           </Card>
         </Collapse>
 
         <Button id="7" className="btn btn-primary btn-lg btn-block" fontFamily='Noticia Text' color="secondary"
-        onClick={this.toggle7} style={{ borderColor: 'Black', marginBottom: '0rem' }}>User Feedback</Button>
+        onClick={this.toggle7} style={{ borderColor: 'Black', marginBottom: '0rem' }}><small>Make Contact</small></Button>
         <Collapse id="7" isOpen={this.state.collapse7}>
-          <Card  >
+          <Card style={{ backgroundColor: '#5F9EA0' }}>
             <CardBody>
              <ul>
-             <li><a href="mailto:jjdonson@gmail.com?subject=webAppResume%20Feedback&body=REPRODUCIBLE%20BUG%20REPORT:%0D%0AbugName:%0D%0AbugURL:%0D%0AbugDate:%0D%0AbugReporter:%0D%0A%0D%0AATTACH%20SCREENSHOT?%0D%0A%0D%0ATHANK%20YOU!" target="_blank" rel="noopener noreferrer" >Report</a> A Bug</li>
-             </ul>
+             <li><img src={mail_logo} className="Job-logo" alt="logo" /><img src={clear} className="Clear" alt="logo" />
+             <a href="mailto:jjdonson@gmail.com?subject=webAppResume%20Feedback">email us</a></li>
              <hr/>
-             <p align="right"><small><a href="" target="_blank" rel="noopener noreferrer">hatTips</a></small></p>
+             <li><img src={caller} className="Job-logo" alt="logo" /><img src={clear} className="Clear" alt="logo" />
+             <a href="tel:1-718-710-9434">call us</a></li>
+             <hr/>
+             <li><img src={bug} className="Job-logo" alt="logo" /><img src={clear} className="Clear" alt="logo" />
+             <a href="mailto:jjdonson@gmail.com?subject=webAppResume%20Feedback&body=PROVIDE%20A%20REPRODUCIBLE%20BUG%20REPORT:%0D%0AbugName:%0D%0AbugURL:%0D%0AbugDate:%0D%0AbugReporter:%0D%0A%0D%0AATTACH%20SCREENSHOT!%0D%0A%0D%0ATHANK%20YOU!" target="_blank" rel="noopener noreferrer" >report bug</a></li>
+             </ul>
+             <p align="right"><small><a href="http://www.softwaretestinghelp.com/sample-bug-report/" target="_blank" rel="noopener noreferrer">hatTips</a></small></p>
              </CardBody>
           </Card>
         </Collapse>
 
-<footer className="App-footer"><h5>
-<a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" title="React.js Rules The Web"><img src={react_logo}
-className="App-logo-foot" alt="logo" /> React.js</a> ... <a href="https://reactjs.org/"
-target="_blank" rel="noopener noreferrer" title="built for the future">b<small>4</small>tf</a></h5>
-<p><br/>©2018 Jeremy Donson, New York City 10027</p>
+<footer className="App-footer">
+<small><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" title="React.js Rules The Web"><img src={react_logo}
+className="App-logo-foot" alt="logo" /> React.js</a> ... built4future
+<br/>©2018 Jeremy Donson, New York City 10027
+</small>
 </footer>
-      </div>
+</div>
     );
   }
 }
@@ -274,6 +321,8 @@ target="_blank" rel="noopener noreferrer" title="built for the future">b<small>4
 export default Accordion;
 
 /*
+
+
 
 <span>
     Our&nbsp;New thingamabob is&nbsp;the<br class="full-width-breakpoint"/> best&nbsp;thing since&nbsp;sliced&nbsp;bread!
@@ -296,4 +345,14 @@ Max Width depends on your design only experimentation or  calculation will revea
 
 <a href="http://www.softwaretestinghelp.com/sample-bug-report/" target="_blank" rel="noopener noreferrer"></a>
 
+            <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/ycqkdsx4">Intro</a>
+            <br/>
+            <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/y7l5ytbt">Resume</a>
+            <br/>
+
+
+
+<Link to="route" target="_blank" onClick={(event) => {event.preventDefault(); window.open(this.makeHref("route"));}} />
+
+<div align="center" style={{ width: '35%', height: '50%', float: 'left'}}>
 */

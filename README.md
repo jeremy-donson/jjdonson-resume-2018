@@ -2,19 +2,28 @@
 
 ## React WebApp Resume Sections:
 * [ ]: Professional Experience
-* * Mouseover darken
-* * CollapseInCollapse? else add routes
-* * Translate br to p
-* * Fix file downloads.
+* * minify images when below 350?
 * * Move all css to App.css
+* * Fix file downloads.
+* * DRY
 * * Create imports components or generate array of dict { "objName": "react_logo", "refs": "react-logo.png"}
+* [ ]: Resume Links
 * [ ]: Current Projects
-* [ ]: User Feedback
-* [ ]: Site Map
+* * linkedUp => nonDisclosureForm
+* * barterEngine => devReg
+* * weHive => 
+* [ ]: Strategic Roadmap
+* [ ]: Make Contact
 
-
-
-
-
+* [ ]: UI Features
+* * http://modernizr.com">Modernizr
+* * http://w3bits.com/css-masonry/
+* * http://ianlunn.github.io/Hover/
+* * Sortify
+* * https://fonts.google.com/specimen/Noticia+Text
+* * http://vectorpaint.yaks.co.nz/
+* * Hover stuff.  title + ?
+* * Link colors (b4+after)
+* * Translate br to p
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
