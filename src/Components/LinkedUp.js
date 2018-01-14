@@ -13,45 +13,55 @@ export default () => (
 <form>
 <fieldset >
 <p>Personal email address.<br/>
-<input type="text" name="nda_email" size="50" style={{ border: '1px solid #ff0000' }}/></p>
+<input type="text" name="nda_email" size="30" style={{ border: '1px solid #ff0000' }}/></p>
 
 <p>Personal phone number.<br/
-><input type="text" name="nda_phone" size="50" style={{ border: '1px solid #ff0000' }}/></p>
+><input type="text" name="nda_phone" size="30" style={{ border: '1px solid #ff0000' }}/></p>
 
 <p>Full legal name.<br/>
-<input type="text" name="nda_legal_name" size="50" style={{ border: '1px solid #ff0000' }}/></p>
+<input type="text" name="nda_legal_name" size="30" style={{ border: '1px solid #ff0000' }}/></p>
 
 <p>Full legal mailing address.<br/>
-<input type="text" name="nda_mail_address1" size="50" style={{ border: '1px solid #ff0000' }}/><br/>
-<input type="text" name="nda_mail_address2" size="50" style={{ border: '1px solid #ff0000' }}/></p>
+<input type="text" name="nda_mail_address1" size="30" style={{ border: '1px solid #ff0000' }}/><br/>
+<input type="text" name="nda_mail_address2" size="30" style={{ border: '1px solid #ff0000' }}/></p>
 
-<p>Full business email address.<br/>
-<input type="text" name="nda_email_biz" size="50" style={{ border: '1px solid #ff0000' }}/><br/>
-<input type="text" name="nda_email_biz" size="50" style={{ border: '1px solid #ff0000' }}/></p>
+<p>Legal business name.<br/>
+<input type="text" name="nda_biz_name" size="30" style={{ border: '1px solid #ff0000' }}/></p>
+
+<p>Type of business.<br/>
+<input type="text" name="nda_email_biz" size="30" style={{ border: '1px solid #ff0000' }}/></p>
+
+<p>Business Principle Full Name.<br/>
+<input type="text" name="nda_email_principle" size="30" style={{ border: '1px solid #ff0000' }}/></p>
+
+
+<p>Business email address.<br/>
+<input type="text" name="nda_biz_email_address1" size="30" style={{ border: '1px solid #ff0000' }}/><br/>
+<input type="text" name="nda_biz_email_address2" size="30" style={{ border: '1px solid #ff0000' }}/></p>
 
 <p>Business phone number.<br/>
-<input type="text" name="nda_phone_biz" size="50" style={{ border: '1px solid #ff0000' }}/></p>
+<input type="text" name="nda_phone_biz" size="30" style={{ border: '1px solid #ff0000' }}/></p>
 
 <p>Agreement declared in which US state?<br/>
-<input type="text" name="nda_state" value="New York" size="50" style={{ border: '1px solid #ff0000' }}/></p>
+<input type="text" name="nda_state" value="New York" size="30" style={{ border: '1px solid #ff0000' }}/></p>
 
 <p>Date agreement made active.<br/>
-<input type="text" id="start_date" name="nda_start_date" size="50" style={{ border: '1px solid #ff0000' }}/></p>
+<input type="text" id="start_date" name="nda_start_date" size="30" style={{ border: '1px solid #ff0000' }}/></p>
 
 <p>Duration of agreement.<br/>
-<input type="text" name="nda_legal_name" size="50" value="Permanent" style={{ border: '1px solid #ff0000' }}/></p>
+<input type="text" name="nda_legal_name" size="30" value="Permanent" style={{ border: '1px solid #ff0000' }}/></p>
 
 <p>Can you have this completed form notarized within 48 hours?<br/>
 <label for="nda_notarized_yes">Yes </label> <input type="radio" id="nda_notarized_yes" name="nda_notarized" value="yes"/> | <input type="radio" id="nda_notarized_no" name="nda_notarized" value="no"/> <label for="nda_notarized_no"> No</label>
 </p>
 
 <p>Are you a US Citizen?<br/>
-<label for="nda_citizen">Yes </label> <input type="radio" id="notarized_yes" name="notarized" value="yes"/> | <input type="radio" id="notarized_no" name="notarized" value="no"/> <label for="notarized_no"> No</label>
+<label for="nda_citizen_yes">Yes </label> <input type="radio" id="nda_citizen_yes" name="nda_citizen" value="yes"/> | <input type="radio" id="notarized_no" name="nda_citizen" value="no"/> <label for="nda_citizen_no"> No</label>
 </p>
 <hr/>
 <div align="center" style={{ width: '88%', height: '50%'}}>
-<small>The Parties ("Party 1 and Party 2") are exploring the possibility of engaging in one or more mutually
-beneficial business relationships (collectively, the “Business Relationship”).
+<small>The Parties ("Party 1, ie PROVIDER, and Party 2, ie RECIPIENT") are exploring the possibility of engaging
+in one or more mutually beneficial business relationships (collectively, the “Business Relationship”).
 The Parties recognize that in the course of their discussions to further the Business Relationship,
 it will be necessary for each Party to disclose to the other certain Confidential Information (as defined below).
 Each Party desires to set forth the terms that apply to such Confidential Information.
@@ -101,11 +111,15 @@ Said disclosures shall include:
 <p>Access to workflow diagrams.</p>
 <hr/>
 <p>For any questions prior to agreeing to each and every one of these terms,<br/>
-<i class="fa fa-envelope-square fa-2x"></i> <a href="mailto:jjdonson@gmail.com&subject=linkedup%20nda%20questions">email the provider</a> <i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i> <br/>
+<i class="fa fa-envelope-square fa-2x"></i> <a href="mailto:jjdonson@gmail.com&subject=linkedup%20nda%20questions">Email The Provider</a> <i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i> <br/>
 and candidly describe
 your concerns as secure recipient.</p>
 <hr/>
+<p>Do you agree to these terms?<br/>
+<label for="nda_agree_yes">Yes </label> <input type="radio" id="nda_agree_yes" name="notarized" value="yes"/> | <input type="radio" id="notarized_no" name="nda_citizen_no" value="no"/> <label for="nda_citizen_no"> No</label>
+</p>
 
+<hr/>
 <Button name="nda_submit" color="secondary" ><i class="fa fa-lock"></i> Submit NDA Form <i class="fa fa-lock"></i></Button>
 
 </fieldset>
