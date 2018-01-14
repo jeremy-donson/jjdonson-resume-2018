@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import  { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
+import bugNinja from  './Images/bugNinja.gif';
 import linkedup_logo from './Images/linkup.svg';
 import barter_logo from './Images/appengine.svg';
 import wehive_logo from './Images/honeycomb.svg';
@@ -48,6 +49,9 @@ import envs_thumb from './Images/_envs_thumb.png';
 import intro from './Components/Intro';
 import resume from './Components/Resume';
 import pagenot from './Components/PageNot';
+
+import crowdsmash from './Components/Crowdsmash';
+
 
 import linkedup from './Components/LinkedUp';
 import barterengine from './Components/BarterEngine';
@@ -182,6 +186,8 @@ class Accordion extends Component {
             <Router>
             <div>
             <ul style={{listStyle: 'none'}}>
+            <li><Link to="/crowdSmash"><img src={ bugNinja } className="Job-logo3" alt="logo" /><img src={ clear } className="Job-logo" alt="logo" />crowdSmash</Link></li>
+            <hr/>
             <li><Link to="/linkedUp">linkedUp<img src={ clear } className="Job-logo" alt="logo" /><img src={ linkedup_logo } className="Job-logo3" alt="logo" /></Link></li>
             <hr/>
             <li><Link to="/barterEngine"><img src={ barter_logo } className="Job-logo3" alt="logo" />barterEngine</Link></li>
@@ -190,9 +196,10 @@ class Accordion extends Component {
             <hr/>
             </ul>
             <Switch>
-              <Route path="/linkedUp" component={linkedup}/>
-              <Route path="/barterEngine" component={barterengine}/>
+              <Route path="/crowdSmash" component={crowdsmash}/>
               <Route path="/weHive" component={wehive}/>
+              <Route path="/barterEngine" component={barterengine}/>
+              <Route path="/linkedUp" component={linkedup}/>
             </Switch>
             </div>
             </Router>

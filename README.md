@@ -1,14 +1,34 @@
 # Resumes Are A Dead Medium
 
+## Bugs
+* [ ]: IE Tests
+
+## Features
+* [ ]: sortable
+* [ ]: Carousel Tests
+* [ ]: Masonry Tests
+* [ ]: git hook => repo size
+* [ ]: pruneCss
+
 ## React WebApp Resume Sections:
+* [ ]: Expertise
 * [ ]: Professional Experience
-* * minify images when below 350?
+* [ ]: Current Projects
+* [ ]: Resume Links
+* [ ]: Support Services
+* [ ]: Strategic Roadmaps
+* * [ ]: Five Navs Max
+* * [ ]: Three Clicks Per User Story
+* * [ ]: Cross-Browser
+* * [ ]: Cross-Device
+* [ ]: UI Features
+* [ ]: Make Contact
+
+* * minify images when below 380?
 * * Move all css to App.css
 * * Fix file downloads.
 * * DRY
 * * Create imports components or generate array of dict { "objName": "react_logo", "refs": "react-logo.png"}
-* [ ]: Resume Links
-* [ ]: Current Projects
 * * linkedUp => nonDisclosureForm
 * * barterEngine => devReg
 * * weHive => 

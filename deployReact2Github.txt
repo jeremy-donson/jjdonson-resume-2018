@@ -1,0 +1,27 @@
+# http://work.mcoyle.com/2017/02/28/deploying-a-react-app-to-github-pages/
+
+# 1. Cloned github project:
+
+git clone https://github.com/megancoyle/sticky-notes
+
+cd sticky-notes
+
+# 2. Installed all node dependencies:
+npm install
+
+# 3. Tried to run the app locally.
+
+npm start
+
+time create-react-app deploy2ghub
+
+cd deploy2ghub
+
+node start
+
+"homepage": "https://jeremy-donson.github.io/sticky-notes"
+
+git remote delete origin
+git remote add origin https://github.com/jeremy-donson/sticky-notes
+
+npm run deploy
