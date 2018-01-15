@@ -2,6 +2,10 @@
 
 ## Bugs
 * [ ]: IE Tests
+* [ ]: absolute paths for htaccess => basename and array 
+* [ ]: Create imports components or generate array of dict { "objName": "react_logo", "refs": "react-logo.png"}
+* { }: DRY
+
 
 ## Features
 * [ ]: sortable
@@ -27,8 +31,6 @@
 * * minify images when below 380?
 * * Move all css to App.css
 * * Fix file downloads.
-* * DRY
-* * Create imports components or generate array of dict { "objName": "react_logo", "refs": "react-logo.png"}
 * * linkedUp => nonDisclosureForm
 * * barterEngine => devReg
 * * weHive => 
