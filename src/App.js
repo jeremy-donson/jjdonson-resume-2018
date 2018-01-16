@@ -186,7 +186,7 @@ class Accordion extends Component {
             <Router>
             <div>
             <ul style={{listStyle: 'none'}}>
-            <li><Link to="/crowdSmash"><img src={ bugNinja } className="Job-logo3" alt="logo" /><img src={ clear } className="Job-logo" alt="logo" />crowdSmash</Link></li>
+            <li><Link to="/crowdSmash"><img src={ bugNinja } className="Job-logo3" alt="logo" border="5"/><img src={ clear } className="Job-logo" alt="logo" />crowdSmash</Link></li>
             <hr/>
             <li><Link to="/linkedUp">linkedUp<img src={ clear } className="Job-logo" alt="logo" /><img src={ linkedup_logo } className="Job-logo3" alt="logo" /></Link></li>
             <hr/>

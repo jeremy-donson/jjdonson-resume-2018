@@ -1,11 +1,18 @@
-# Resumes Are A Dead Medium
+# Web Resume
+
+# Next Steps
 
 ## Bugs
-* [ ]: IE Tests
+* [ ]: Names redirect via arg count
+* [ ]: Counts
+* [ ]: Router with no links?
+* [ ]: Modernizr
+* [ ]: IE Tests with selenium
 * [ ]: absolute paths for htaccess => basename and array 
 * [ ]: Create imports components or generate array of dict { "objName": "react_logo", "refs": "react-logo.png"}
-* { }: DRY
-
+* [ ]: DRY
+* [ ]: Write up explanation for go => express => react.js + router4
+* [ ]: new window for svg diagrams
 
 ## Features
 * [ ]: sortable
@@ -13,6 +20,13 @@
 * [ ]: Masonry Tests
 * [ ]: git hook => repo size
 * [ ]: pruneCss
+
+## Design Issues:
+* [ ]: hover image links
+* [ ]: hover text links
+* [ ]: icons for ui guides
+* [ ]: gif border
+* [ ]: 
 
 ## React WebApp Resume Sections:
 * [ ]: Expertise
