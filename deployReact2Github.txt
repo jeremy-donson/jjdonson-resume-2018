@@ -19,9 +19,9 @@ cd deploy2ghub
 
 node start
 
-"homepage": "https://jeremy-donson.github.io/sticky-notes"
+"homepage": "https://jeremy-donson.github.io/jjdonson-resume-2018"
 
 git remote delete origin
-git remote add origin https://github.com/jeremy-donson/sticky-notes
+git remote add origin https://github.com/jeremy-donson/jjdonson-resume-2018
 
 npm run deploy
